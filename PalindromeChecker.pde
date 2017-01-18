@@ -4,7 +4,7 @@ public void setup()
   println("there are " + lines.length + " lines");
   for (int i=0; i < lines.length; i++) 
   {
-    if(palindrome(lines[i])==true)
+    if(palindrome(noSpaces(lines[i]))==true)
     {
       println(lines[i] + " IS a palidrome.");
     }
@@ -31,6 +31,13 @@ public String reverse(String str)
       sNew = sNew + str.charAt(i);
     }
     return sNew;
+}
+public String noSpaces(String sWord){
+  String n = new String();
+  for (int i = 0; i < sWord.length(); i++)
+    if (Character.isLetter(sWord.charAt(i)) == true)
+      n = n + sWord.charAt(i);
+  return n;
 }
 
 
