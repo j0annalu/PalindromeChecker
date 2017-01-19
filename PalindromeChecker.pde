@@ -4,7 +4,7 @@ public void setup()
   println("there are " + lines.length + " lines");
   for (int i=0; i < lines.length; i++) 
   {
-    if(palindrome(noSpaces(lines[i]))==true)
+    if(palindrome(noSpaces(noCapitals(lines[i])))==true)
     {
       println(lines[i] + " IS a palidrome.");
     }
@@ -39,5 +39,10 @@ public String noSpaces(String sWord){
       n = n + sWord.charAt(i);
   return n;
 }
+
+public String noCapitals(String sWord){
+  return sWord.toLowerCase();
+}
+
 
 
